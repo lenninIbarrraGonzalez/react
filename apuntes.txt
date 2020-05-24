@@ -53,3 +53,9 @@ Cuando un componente cambia, pasa por una actualización, cuando se actualizan s
 Es posible que dentro de la aplicación se vaya a otra pagina, entonces los componentes desaparecerán y se ejecutara componentWillUnmount()
 
 
+Cómo aplicar estilos
+Para los estilos crearemos una carpeta llamada Styles y allí vivirán todos los archivos de estilos que tienen que ver con los componentes.
+Para usar los estilos es necesario importarlos con import
+React funciona ligeramente diferente y para los atributos de clases no se utiliza class sino className
+Es posible utilizar Bootstrap con React, sólo debe ser instalado con npm install bootstrap y debe ser importado en el index.js
+Existen estilos que son usados de manera global o en varios componentes, así que deben ser importados en el index.js
