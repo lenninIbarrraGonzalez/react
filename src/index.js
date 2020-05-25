@@ -11,18 +11,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./global.css";
-import Badge from "./components/Badges";
-
-//esto es jsx por eso importamos React
-// const jsx = <h1>Hola Stalin</h1>;
-
-// const element = React.createElement("h1", {}, "hola Ho Chi Min");
-// const element = React.createElement(
-//   "a",
-//   { href: "http://www.allnexus.com.co" },
-//   "All Nexus SAS"
-// );
-
+// import Badge from "./components/Badges";
+import BadgeNew from "./pages/BadgeNew";
 // const politic = "¡Comunista!";
 // const sum = function () {
 //   return 2 + 7;
@@ -57,4 +47,14 @@ const container = document.getElementById("app");
 
 // ReactDOM.render(__que__ , __donde__)
 // ReactDOM.render(element, container);
-ReactDOM.render(<Badge />, container);
+// ReactDOM.render(
+//   <Badge
+//     firstName="Chimuelo"
+//     lastName="Alfonso"
+//     jobTitle="Perro guardian"
+//     twitter="chimuelo666"
+//   />,
+//   container
+// );
+
+ReactDOM.render(<BadgeNew />, container);
