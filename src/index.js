@@ -12,10 +12,10 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./global.css";
 // import Badge from "./components/Badges";
-import BadgeNew from "./pages/BadgeNew";
+// import BadgeNew from "./pages/BadgeNew";
 
-import Badges from "./pages/Badges";
-
+// import Badges from "./pages/Badges";
+import App from "./components/App";
 // const politic = "¡Comunista!";
 // const sum = function () {
 //   return 2 + 7;
@@ -60,4 +60,4 @@ const container = document.getElementById("app");
 //   container
 // );
 
-ReactDOM.render(<Badges />, container);
+ReactDOM.render(<App />, container);
