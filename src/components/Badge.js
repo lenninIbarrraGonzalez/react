@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/Badge.css";
 import confLogo from "../images/badge-header.svg";
 
-class Badges extends React.Component {
+class Badge extends React.Component {
   render() {
     return (
       <div className="Badge">
@@ -29,4 +29,4 @@ class Badges extends React.Component {
   }
 }
 
-export default Badges;
+export default Badge;

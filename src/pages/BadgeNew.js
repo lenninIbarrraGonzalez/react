@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import header from "../images/badge-header.svg";
-import Badges from "../components/Badges";
+import Badge from "../components/Badge";
 import "./styles/BadgeNew.css";
 import BadgeForm from "../components/BadgeForm";
 
@@ -47,7 +47,7 @@ class BadgeNew extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-6">
-              <Badges
+              <Badge
                 firstName={this.state.form.firstName}
                 lastName={this.state.form.lastName}
                 twitter={this.state.form.twitter}

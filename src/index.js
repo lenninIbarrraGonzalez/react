@@ -13,6 +13,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./global.css";
 // import Badge from "./components/Badges";
 import BadgeNew from "./pages/BadgeNew";
+
+import Badges from "./pages/Badges";
+
 // const politic = "¡Comunista!";
 // const sum = function () {
 //   return 2 + 7;
@@ -57,4 +60,4 @@ const container = document.getElementById("app");
 //   container
 // );
 
-ReactDOM.render(<BadgeNew />, container);
+ReactDOM.render(<Badges />, container);
