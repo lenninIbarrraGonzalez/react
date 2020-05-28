@@ -1,0 +1,17 @@
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background: url("../../images/stars.svg"), #1b1b25;
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.contenedor img {
+  height: 130px;
+}
