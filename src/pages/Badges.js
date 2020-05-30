@@ -6,6 +6,8 @@ import confLogo from "../images/badge-header.svg";
 import BadgesList from "../components/BadgesList";
 
 import api from "../api";
+import PageLoading from "../components/PageLoading";
+import PageError from "../components/PageError";
 
 class Badges extends React.Component {
   state = {
@@ -19,32 +21,23 @@ class Badges extends React.Component {
   }
 
   fetchData = async () => {
-    this.setState({
-      loading: true,
-      error: null,
-    });
+    this.setState({ loading: true, error: null });
 
     try {
       const data = await api.badges.list();
-      this.setState({
-        loading: false,
-        data: data,
-      });
+      this.setState({ loading: false, data: data });
     } catch (error) {
-      this.setState({
-        loading: false,
-        error: error,
-      });
+      this.setState({ loading: false, error: error });
     }
   };
 
   render() {
     if (this.state.loading === true) {
-      return "Loading ...";
+      return <PageLoading />;
     }
 
     if (this.state.error) {
-      return `Error: ${this.state.error.message}`;
+      return <PageError error={this.state.error} />;
     }
     return (
       <React.Fragment>
