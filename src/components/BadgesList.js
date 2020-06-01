@@ -1,6 +1,7 @@
 import React from "react";
 import imgtwitter from "../images/twitter.png";
 import { Link } from "react-router-dom";
+import "./styles/BadgeList.css";
 class BadgesList extends React.Component {
   render() {
     if (this.props.badges.length === 0) {
@@ -18,19 +19,24 @@ class BadgesList extends React.Component {
       <ul className="list-unstyled">
         {this.props.badges.map((badge) => {
           return (
-            <li key={badge.id} className="Badges__container-card">
-              <div className="Badges__container-avatar">
-                <img src={badge.avatarUrl} alt="" />
-              </div>
-              <div>
-                <h5>
-                  {badge.firstName} {badge.lastName}
-                </h5>
-                <p className="Badges__container-twitter">
-                  <img src={imgtwitter} alt="logo twitter" />@{badge.twitter}
-                </p>
-                <strong>{badge.jobTitle}</strong>
-              </div>
+            <li key={badge.id}>
+              <Link
+                className="text-reset text-decoration-none Badges__container-card"
+                to={`/badges/${badge.id}/edit`}
+              >
+                <div className="Badges__container-avatar">
+                  <img src={badge.avatarUrl} alt="" />
+                </div>
+                <div className='Badges__container-info'>
+                  <h5>
+                    {badge.firstName} {badge.lastName}
+                  </h5>
+                  <p className="Badges__container-twitter">
+                    <img src={imgtwitter} alt="logo twitter" />@{badge.twitter}
+                  </p>
+                  <strong>{badge.jobTitle}</strong>
+                </div>
+              </Link>
             </li>
           );
         })}
