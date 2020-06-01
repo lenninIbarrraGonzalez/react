@@ -1,30 +1,25 @@
 import React from "react";
 // import NavBar from "../components/NavBar";
-import header from "../images/badge-header.svg";
+import header from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
 import "./styles/BadgeNew.css";
 import BadgeForm from "../components/BadgeForm";
+import api from "../api";
+import md5 from "md5";
+import PageLoading from "../components/PageLoading";
 
 class BadgeNew extends React.Component {
   state = {
+    loading: false,
+    error: null,
     form: {
-      // firstName: "",
-      // lastName: "",
-      // email: "",
-      // jobTitle: "",
-      // twitter: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      jobTitle: "",
+      twitter: "",
     },
   };
-
-  //primera forma para solucionar que los datos se mantengan en la pagina
-  // handleChange = (e) => {
-  //   const nextForm = this.state.form;
-  //   nextForm[e.target.name] = e.target.value;
-
-  //   this.setState({
-  //     form: nextForm,
-  //   });
-  // };
 
   handleChange = (e) => {
     this.setState({
@@ -33,32 +28,58 @@ class BadgeNew extends React.Component {
         ...this.state.form,
         //agregamos los nuevos valores
         [e.target.name]: e.target.value,
+        avatarUrl: `https://www.gravatar.com/avatar/${md5(
+          this.state.form.email
+        )}`,
       },
     });
   };
 
+  handleSubmit = async (e) => {
+    e.preventDefault();
+    this.setState({ loading: true, error: null });
+
+    try {
+      await api.badges.create(this.state.form);
+      this.setState({ loading: false });
+
+      this.props.history.push('/badges');
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
+  };
+
   render() {
+    if (this.state.loading) {
+      return <PageLoading />;
+    }
     return (
       <React.Fragment>
         {/* <NavBar /> */}
         <div className="BadgeNew__hero">
-          <img className="img-fluid" src={header} alt="" />
+          <img
+            className="BadgeNew__hero-imgage img-fluid"
+            src={header}
+            alt=""
+          />
         </div>
         <div className="container">
           <div className="row">
             <div className="col-6">
               <Badge
-                firstName={this.state.form.firstName}
-                lastName={this.state.form.lastName}
-                twitter={this.state.form.twitter}
-                jobTitle={this.state.form.jobTitle}
-                avatarUrl="https://scontent.fbog15-1.fna.fbcdn.net/v/t1.0-9/p960x960/98605375_1949342245196706_246653688272125952_o.jpg?_nc_cat=107&_nc_sid=85a577&_nc_ohc=fcw4umBTQVwAX-KTGgV&_nc_ht=scontent.fbog15-1.fna&_nc_tp=6&oh=b3bed8100dbb94b4dff034803684d173&oe=5EF1B0D0"
+                firstName={this.state.form.firstName || "FIRST NAME"}
+                lastName={this.state.form.lastName || "LAST NAME"}
+                twitter={this.state.form.twitter || "TWITTER"}
+                jobTitle={this.state.form.jobTitle || "JOB TITLE"}
+                avatarUrl="https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon"
               />
             </div>
             <div className="col-6">
               <BadgeForm
                 onChange={this.handleChange}
+                onSubmit={this.handleSubmit}
                 formValues={this.state.form}
+                error={this.state.error}
               />
             </div>
           </div>

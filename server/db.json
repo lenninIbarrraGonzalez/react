@@ -440,6 +440,41 @@
       "jobTitle": "Lawyer",
       "twitter": "ckaufmanpr",
       "id": "npaYZKI"
+    },
+    {
+      "firstName": "Pepe",
+      "lastName": "Mujica",
+      "email": "pepe@mujica.com.co",
+      "jobTitle": "Ingeniero FrontEnd",
+      "twitter": "pepe",
+      "id": "U91mFzB"
+    },
+    {
+      "firstName": "Valentina",
+      "lastName": "Ibarra",
+      "email": "valentinaibarra011@gmail.com",
+      "jobTitle": "ingeniera",
+      "twitter": "vale666",
+      "avatarUrl": "https://www.gravatar.com/avatar/3cbff15391ffd9d97a8ca80e473da5ca",
+      "id": "cDFWzI_"
+    },
+    {
+      "firstName": "Julia",
+      "lastName": "Gavilanes",
+      "email": "julia@gmail.com",
+      "jobTitle": "diseñadora",
+      "twitter": "julia",
+      "avatarUrl": "https://www.gravatar.com/avatar/c5b0841a24691bcd1c6a3410ea0ccdbf",
+      "id": "3_rPHSM"
+    },
+    {
+      "firstName": "Lenin",
+      "lastName": "Ibarra",
+      "email": "gerencia@allnexus.comc.o",
+      "jobTitle": "Ingeniero FrontEnd",
+      "twitter": "allNexus",
+      "avatarUrl": "https://www.gravatar.com/avatar/d8a2969152a9263f70c8efa6c96173e7",
+      "id": "swLoUiz"
     }
   ]
 }

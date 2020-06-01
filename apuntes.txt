@@ -148,3 +148,10 @@ Las llamadas a una API siguen un patrón similar siempre que las hacemos, cada l
 Loading: cuando la petición se envía y estamos esperando.
 Error: se debe dejar un mensaje para el usuario para arreglar el error o volver a intentarlo.
 Data: los datos nos pueden llegar de dos formas, o en error o con los datos requeridos
+
+
+
+**********Reucursos*******
+animaciones en css para la carga de información
+https://loading.io/css/
+
