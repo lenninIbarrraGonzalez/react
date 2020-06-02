@@ -2,12 +2,12 @@
   "badges": [
     {
       "id": "2de30c42-9deb-40fc-a41f-05e62b5939a7",
-      "firstName": "Freda",
+      "firstName": "Fryda",
       "lastName": "Grady",
       "email": "Leann_Berge@gmail.com",
       "jobTitle": "Legacy Brand Director",
       "twitter": "FredaGrady22221-7573",
-      "avatarUrl": "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
+      "avatarUrl": "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b"
     },
     {
       "id": "d00d3614-101a-44ca-b6c2-0be075aeed3d",
@@ -440,6 +440,41 @@
       "jobTitle": "Lawyer",
       "twitter": "ckaufmanpr",
       "id": "npaYZKI"
+    },
+    {
+      "firstName": "Pepe",
+      "lastName": "Mujica",
+      "email": "pepe@mujica.com.co",
+      "jobTitle": "Ingeniero FrontEnd",
+      "twitter": "pepe",
+      "id": "U91mFzB"
+    },
+    {
+      "firstName": "Valentina",
+      "lastName": "Ibarra",
+      "email": "valentinaibarra011@gmail.com",
+      "jobTitle": "ingeniera",
+      "twitter": "vale666",
+      "avatarUrl": "https://www.gravatar.com/avatar/3cbff15391ffd9d97a8ca80e473da5ca",
+      "id": "cDFWzI_"
+    },
+    {
+      "firstName": "Rosario",
+      "lastName": "Gonzalez",
+      "email": "rosarito@gmail.com",
+      "jobTitle": "diseñadora",
+      "twitter": "Rosarito",
+      "avatarUrl": "https://www.gravatar.com/avatar/e7d16eac8f9fc13712dc05d2337af581",
+      "id": "3_rPHSM"
+    },
+    {
+      "firstName": "Lenin",
+      "lastName": "Ibarra",
+      "email": "gerencia@allnexus.comc.o",
+      "jobTitle": "Ingeniero FrontEnd",
+      "twitter": "allNexus",
+      "avatarUrl": "https://www.gravatar.com/avatar/d8a2969152a9263f70c8efa6c96173e7",
+      "id": "swLoUiz"
     }
   ]
 }
