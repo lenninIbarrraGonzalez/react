@@ -28,7 +28,7 @@ const api = {
       // throw new Error("500: Server Error");
       return callApi("/badges");
       // return [];
-      return;
+      // return;
     },
     create(badge) {
       // throw new Error("500: Server error");
